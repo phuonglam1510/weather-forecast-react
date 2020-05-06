@@ -1,0 +1,14 @@
+@import 'Styles/mixins';
+
+.Dashboard {
+  .Container {
+    margin: 20px;
+    background: white;
+    padding: 20px;
+  }
+
+  .Header {
+    padding: 20px;
+    background: white;
+  }
+}

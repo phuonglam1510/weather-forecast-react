@@ -1,0 +1,98 @@
+@import 'Styles/mixins';
+
+.Login-Container {
+  height: 100vh;
+  .ant-col {
+    height: 100%;
+  }
+  .Left {
+    display: flex;
+    position: relative;
+    img.Background {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .Logo {
+      position: absolute;
+      left: 30px;
+      top: 20px;
+      // width: 111px;
+      h1 {
+        margin: 0px;
+        font-size: 40px;
+        font-weight: 900;
+        color: white;
+        line-height: 40px;
+      }
+      h4 {
+        margin: 0px;
+        letter-spacing: 2px;
+        font-size: 17px;
+        font-weight: 900;
+        color: #ffbb00;
+      }
+    }
+    @include breakpoint(xs) {
+      display: none;
+    }
+  }
+  .Toolbar {
+    padding: 30px;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    span {
+      margin-right: 10px;
+    }
+    img.Logo-mobile {
+      display: none;
+      @include breakpoint(xs) {
+        display: flex;
+      }
+    }
+    @include breakpoint(xs) {
+      justify-content: space-between;
+    }
+  }
+  .Form-Container {
+    text-align: center;
+    margin-top: 80px;
+    @include breakpoint(xs) {
+      margin-top: 0;
+    }
+    .Term {
+      font-size: 14px;
+      font-weight: 500;
+      margin-left: 5px;
+    }
+    .ant-form {
+      h3 {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 44px;
+        color: #1b2a49;
+      }
+      text-align: left;
+      max-width: 500px;
+      padding: 30px;
+      width: 100%;
+      display: inline-block;
+    }
+  }
+  &__Button {
+    margin-top: 28px;
+    width: 150px;
+    float: right;
+    @include breakpoint(xs) {
+      width: 100%;
+    }
+  }
+  &_mobile {
+    display: block;
+    @include breakpoint(xs) {
+      display: none;
+    }
+  }
+}
