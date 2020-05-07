@@ -17,10 +17,10 @@ export const AuthContext = createContext<AuthContextProps>({
   isAuthenticated: false,
   user: undefined,
   errorMessage: '',
-  updateUser: () => {},
-  setAuthenticated: () => {},
-  handleLogin: async () => {},
-  handleLogout: () => {},
+  updateUser: () => true,
+  setAuthenticated: () => true,
+  handleLogin: async () => true,
+  handleLogout: () => true,
 });
 type Props = {
   children: React.ReactNode | React.ReactNodeArray;
@@ -30,8 +30,6 @@ export const AuthProvider: React.FunctionComponent<Props> = ({ children }: Props
   const [user, setUser] = useState<IUser | undefined>(undefined);
   const [errorMessage, setErrorMessage] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  
 
   const clearLocalStorageItems = (): void => {
     // Clear all local storage items

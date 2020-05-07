@@ -63,7 +63,7 @@ const AuthComponent: React.FC<IProps> = (props: IProps) => {
           'Calendar__Timelist_listitem-active': time === selectedTime,
           'Calendar__Timelist_listitem-disabled': isDisabled,
         })}
-        onClick={isDisabled ? () => {} : () => handleSelectTime(time)}
+        onClick={isDisabled ? () => true : () => handleSelectTime(time)}
       >
         {time}
       </div>

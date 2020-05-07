@@ -37,7 +37,7 @@ const ActiveUsersComponent: React.FunctionComponent<Props> = () => {
                 <Popconfirm
                   title="Are you sure？"
                   okText="Yes"
-                  onConfirm={() => {}}
+                  onConfirm={() => true}
                   cancelText="No"
                 >
                   <span key="list-loadmore-more">Chặn</span>

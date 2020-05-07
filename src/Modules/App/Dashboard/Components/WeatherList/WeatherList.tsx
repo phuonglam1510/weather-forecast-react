@@ -16,6 +16,7 @@ const WeatherList: React.FunctionComponent<Props> = () => {
     if (currentLocation && currentLocation.woeid) {
       loadWeathers();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentLocation.woeid]);
 
   return (

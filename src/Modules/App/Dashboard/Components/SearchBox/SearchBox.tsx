@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Input, AutoComplete } from 'antd';
+import { AutoComplete } from 'antd';
 import { AppContext } from 'context/AppProvider';
 
 interface Props {}
@@ -29,8 +29,6 @@ const SearchBox: React.FunctionComponent<Props> = () => {
         placeholder="Search for city, country name"
         notFoundContent={searching ? 'Searching...' : 'No location found!'}
       />
-
-      {/* <Input.Search placeholder="Search for city, country name" style={{ maxWidth: 400 }} /> */}
     </div>
   );
 };

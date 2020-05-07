@@ -1,3 +1,6 @@
+import { getIcon } from 'Helpers/ImageHelper';
+import moment from 'moment';
+
 export class WeatherDay {
   id: number;
 
@@ -45,5 +48,32 @@ export class WeatherDay {
     this.humidity = json.humidity || 0;
     this.visibility = json.visibility || 0;
     this.predictability = json.predictability || 0;
+  }
+
+  get icon() {
+    return getIcon(this.weather_state_abbr);
+  }
+
+  get minTemperature() {
+    return `${Math.round(this.min_temp)}°`;
+  }
+
+  get maxTemperature() {
+    return `${Math.round(this.max_temp)}°`;
+  }
+
+  get dayName() {
+    return moment(this.applicable_date).calendar(null, {
+      sameDay: '[Today]',
+      nextDay: '[Tomorrow]',
+      nextWeek: 'dddd',
+      lastDay: '[Yesterday]',
+      lastWeek: '[Last] dddd',
+      sameElse: 'DD/MM/YYYY',
+    });
+  }
+
+  get isToday() {
+    return moment(this.applicable_date).isSame(moment.now(), 'date');
   }
 }

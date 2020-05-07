@@ -10,10 +10,13 @@ interface Props {
 const WeatherCard: React.FunctionComponent<Props> = ({ day }) => {
   return (
     <div className="WeatherCard">
-      <img src={} />
-      <h3>{day.applicable_date}</h3>
-      <div>Min {day.min_temp}</div>
-      <div>Max {day.max_temp}</div>
+      <h3 className={day.isToday ? 'Today' : ''}>{day.dayName}</h3>
+      <img src={day.icon} alt="day icon" />
+      <div className="Name">{day.weather_state_name} </div>
+      <div className="Temp">
+        <span>{day.maxTemperature} </span>
+        <span>{day.minTemperature}</span>
+      </div>
     </div>
   );
 };

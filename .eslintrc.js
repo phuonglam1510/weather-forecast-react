@@ -63,7 +63,8 @@ module.exports = {
     'react/prop-types': 'off',
      // note you must disable the base rule as it can report incorrect errors
     "camelcase": "off",
-    "@typescript-eslint/camelcase": ["error", { "properties": "never" }]
+    "@typescript-eslint/camelcase": ["error", { "properties": "never" }],
+    "import/extensions": "off"
   },
   settings: {
     'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],

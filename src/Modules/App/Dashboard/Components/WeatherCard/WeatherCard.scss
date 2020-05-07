@@ -1,16 +1,42 @@
 @import 'Styles/mixins';
 
 .WeatherCard {
-  background: rgb(224, 224, 224);
+  background: #4583b6;
   border-radius: 6px;
   padding: 20px;
+  color: white;
+  h3 {
+    color: #e2e47b;
+    &.Today {
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+  .Name {
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  img {
+    width: 50px;
+    object-fit: cover;
+  }
+  .Temp {
+    span:first-of-type {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    span {
+      font-size: 18px;
+    }
+  }
   &.Loading {
     .Title {
-      background-color: gray;
+      background-color: rgb(212, 212, 212);
       height: 30px;
     }
     .Text {
-      background-color: gray;
+      background-color: rgb(236, 236, 236);
       margin-top: 10px;
       margin-right: 20px;
       height: 20px;
