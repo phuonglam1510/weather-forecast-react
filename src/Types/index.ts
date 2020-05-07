@@ -1,2 +1,2 @@
-export * from './Performer';
-export * from './Award';
+export * from './Location';
+export * from './WeatherDay';

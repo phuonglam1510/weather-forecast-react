@@ -2,14 +2,12 @@ import React from 'react';
 import { Col, Row, List, Skeleton, Avatar, Popconfirm } from 'antd';
 
 import './PerformersStyle.scss';
-import { fullName } from 'Types';
 import moment from 'moment';
 
 interface Props {}
 
 const ActiveUsersComponent: React.FunctionComponent<Props> = () => {
   const list: any[] = [];
-
 
   return (
     <div className="Pending">
@@ -56,7 +54,7 @@ const ActiveUsersComponent: React.FunctionComponent<Props> = () => {
                       }
                     />
                   }
-                  title={item.firstName ? fullName(item) : item.authEmail}
+                  title={item.firstName}
                   description={`${'Ngày sinh'}: ${moment(dateOfBirth).format('DD/MM/YYYY')}`}
                 />
                 {firstName && (

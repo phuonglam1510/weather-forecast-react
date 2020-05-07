@@ -2,6 +2,7 @@
   "name": "weather-forecast",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://www.metaweather.com",
   "dependencies": {
     "@ant-design/icons": "^4.1.0",
     "antd": "^4.2.0",

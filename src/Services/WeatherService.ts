@@ -35,4 +35,13 @@ export default class WeatherService extends APIService {
       throw error.message || error;
     }
   }
+
+  public async loadWeathers(id: number): Promise<any> {
+    try {
+      const response = await this.httpGet(`${API.LOAD_WEATHERS}/${id}/`);
+      return response;
+    } catch (error) {
+      throw error.message || error;
+    }
+  }
 }

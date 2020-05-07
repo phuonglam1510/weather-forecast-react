@@ -139,10 +139,11 @@ export class APIService {
   }
 
   public httpGet<T>(url: string): Promise<ApiResponse<T>> {
-    return fetch(`${url}`, {
+    return fetch(`${this._baseUrl}${url}`, {
       headers: this._headers,
       method: 'GET',
       credentials: 'include',
+      mode: 'no-cors',
     })
       .then((res: any) => this.handleResponse(res))
       .then((data: any) => {

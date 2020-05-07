@@ -4,4 +4,16 @@
   background: rgb(224, 224, 224);
   border-radius: 6px;
   padding: 20px;
+  &.Loading {
+    .Title {
+      background-color: gray;
+      height: 30px;
+    }
+    .Text {
+      background-color: gray;
+      margin-top: 10px;
+      margin-right: 20px;
+      height: 20px;
+    }
+  }
 }

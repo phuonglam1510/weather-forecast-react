@@ -1,0 +1,12 @@
+@import 'Styles/mixins';
+
+.CurrentLocation {
+  margin-top: 20px;
+  h2 {
+    color: #256aff;
+    margin-bottom: 0px;
+  }
+  h3 {
+    font-weight: bold;
+  }
+}
