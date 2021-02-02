@@ -1,2 +1,2 @@
 export * from './Location';
-export * from './WeatherDay';
+export * from './Sample';

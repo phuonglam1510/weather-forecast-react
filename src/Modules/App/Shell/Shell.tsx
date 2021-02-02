@@ -1,6 +1,6 @@
 import React from 'react';
-import {  Layout } from 'antd';
-import {  Link } from 'react-router-dom';
+import { Layout } from 'antd';
+import { Link } from 'react-router-dom';
 
 import ROUTES from 'Constants/Routes';
 import './ShellStyle.scss';
@@ -14,11 +14,10 @@ interface Props {
 const Shell: React.FunctionComponent<Props> = props => {
   const { children } = props;
 
-
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Header className="Shell__Header">
-        <div className="Shell__Header_Logo">WEATHER FORECAST</div>
+        <div className="Shell__Header_Logo">SAMPLE</div>
         <div className="Shell__Header_Main">
           <div>
             <ul className="Shell__Header_Menu">

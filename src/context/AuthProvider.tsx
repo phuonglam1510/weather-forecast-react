@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 import { USER, TOKEN_KEY, IS_AUTHENTICATED, STATES, CITIES } from 'Constants/StorageConst';
-import CommonService from 'Services/WeatherService';
+import CommonService from 'Services/SampleService';
 import { IUser } from '../Interfaces/IProfile';
 
 type AuthContextProps = {

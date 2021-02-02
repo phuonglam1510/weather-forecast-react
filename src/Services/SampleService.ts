@@ -2,7 +2,7 @@ import API from 'Constants/APIs';
 import { TOKEN_KEY } from 'Constants/StorageConst';
 import { APIService } from './APIService';
 
-export default class WeatherService extends APIService {
+export default class SampleService extends APIService {
   constructor(token = '', baseUrl = '') {
     super(token, baseUrl);
     this.setHeaders([{ key: 'Content-Type', value: 'application/json' }]);
@@ -27,16 +27,7 @@ export default class WeatherService extends APIService {
     }
   }
 
-  public async searchLocations(query: string): Promise<any> {
-    try {
-      const response = await this.httpGet(`${API.SEARCH_LOCATIONS}?query=${query}`);
-      return response;
-    } catch (error) {
-      throw error.message || error;
-    }
-  }
-
-  public async loadWeathers(id: number): Promise<any> {
+  public async loadData(id: number): Promise<any> {
     try {
       const response = await this.httpGet(`${API.LOAD_WEATHERS}/${id}/`);
       return response;
